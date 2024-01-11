@@ -1,141 +1,108 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(45deg, #f7f5f5, #3a4452);
-  transition: 0.8s all;
-}
-.calculator {
-  border: 1px solid #717377;
-  padding: 20px;
-  border-radius: 16px;
-  background-color: transparent;
-  box-shadow: 0px 3px 15px rgba(6, 6, 6, 0.5);
-}
-
-input {
-  width: 320px;
-  border: none;
-  padding: 24px;
-  margin: 10px;
-  background: transparent;
-  box-shadow: opx, 3px, 15px rgba(10, 10, 10, 0.1);
-  font-size: 40px;
-  text-align: right;
-  cursor: pointer;
-  color: #111111;
-}
-input::placeholder {
-  color: #4a4747;
-}
-
-button {
-  border: none;
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  border-radius: 50%;
-  background: transparent;
-  color: #0e0e0e;
-  font-size: 25px;
-  box-shadow: -8px -8px 15px rgba(7, 7, 7, 0.1);
-  cursor: pointer;
-}
-.equal-btn {
-  background-color: #fb7c14ae;
-}
-.operator {
-    color: #0b0b0b;
-}
-
-#github-icon {
-    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans';
+    --webkit-appearance: none;
   }
   
+  .wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(7, 210, 199);
+    transition: 1s all;
+  }
+  
+  h1 {
+    margin-bottom: 1.5%;
+    color: #fff;
+    font-weight: normal;
+    transition: 1s;
+  }
+  
+  .container {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .top-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  input {
+    padding: 25px;
+    color: rgb(87, 87, 87);
+    font-size: 1em;
+    cursor: pointer;
+    width: 70px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    margin: 0.2em;
+  }
+  
+  .first-row,
+  .second-row,
+  .third-row,
+  .fourth-row,
+  .fifth-row 
+  .sixth-row{
+    margin-bottom: 4px;
+  }
+  
+  input[type="button"] {
+    color: rgb(122, 122, 122);
+  }
+  
+  input[type="text"] {
+    background-color: rgb(255, 255, 255);
+    width: 222.5px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: rgb(37, 35, 59);
+    color: #fff;
+  }
+  
+  #clear-button {
+    color: #fff;
+    background-color: rgb(255, 25, 25);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
   .theme-button {
     all: unset;
     cursor: pointer;
   }
 
-  label {
-    width: 100px;
-    height: 50px;
-    margin-top: -370px;
-    margin-right: -500px;
-    position: relative;
-    display: block;
-    background: #ebebeb;
-    border-radius: 50px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-        inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: 0.3s;
-    &:after {
-        content: "";
-        width: 50px;
-        height: 45px;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        background: linear-gradient(180deg, #ffcc89, #d8860b);
-        border-radius: 50px;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
-    }
-    svg {
-        position: absolute;
-        width: 40px;
-        top: 3px;
-        z-index: 100;
-        &.sun {
-            left: 5px;
-            fill: #fff;
-            transition: 0.3s;
-        }
-        &.moon {
-            left: 60px;
-            fill: #7e7e7e;
-            transition: 0.3s;
-        }
-    }
-}
-
-#darkmode-toggle{
-    width: 0;
-    top: 2px;
-    height: 0;
-    visibility: hidden;
-    &:checked + label {
-        background: #242424;
-        &:after {
-            left: 100px;
-            transform: translateX(-100%);
-            background: linear-gradient(180deg, #777, #3a3a3a);
-        }
-        svg {
-            &.sun {
-                fill: #7e7e7e;
-            }
-            &.moon {
-                fill: #fff;
-            }
-        }
-        + .background {
-            background: #242424;
-        }
-    }
-    &:active:after {
-        width: 50px;
-    }
-}
+  .calculator {
+    height: 500px;
+    width: 380px;
+    border: 1px solid #6508e0;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: transparent;
+    box-shadow: 0px 7px 20px rgba(3, 78, 228, 0.5);
+  }
 
 
